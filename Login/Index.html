@@ -19,8 +19,19 @@
         <a href="#">< Free shipping over 100€ order ></a>
       </div>
       <div class="menu">
+        <div class="burger">
+          <button><img src="Files/Burger.svg" alt="" /></button>
+          <ul class="menu-items">
+            <li><a href="#">optics</a></li>
+            <li><a href="#">clothing</a></li>
+            <li><a class="outlet-color" href="#">outlet</a></li>
+            <li><a href="#">naked heroes</a></li>
+            <li><a href="#">stories</a></li>
+          </ul>
+        </div>
         <div class="logo">
-          <img src="Files/Logo.svg" alt="" />
+          <img src="Files/Logo.svg" alt="" class="full-logo">
+          <img src="Files/Union.svg" alt="" class="mobile-logo">
         </div>
 
         <nav>
@@ -32,27 +43,30 @@
         </nav>
         <div class="shopping">
           <a href="#"><img src="Files/Searc-Vector.svg" alt="" /></a>
-          <a href="#"><img src="Files/Profile-Vector.svg" alt="" /></a>
+          <a href="#" class="profile"><img src="Files/Profile-Vector.svg" alt="" /></a>
           <div class="cart">
             <a href="#"><img src="Files/Cart-Vector.svg" alt="Cart icon" /></a>
             <span class="cart-count">4</span>
           </div>
         </div>
       </div>
-    </div>
     <div class="form-container">
       <form>
         <h1>Login</h1>
         <div class="input-box">
           <span>Email address</span>
-          <input type="email" placeholder="name@email.com" required />
+          <input type="email" placeholder="name@email.com" required/>
         </div>
         <div class="input-box">
           <span>Password</span>
-          <input type="password" required />
+          <input type="password" id="psw" required />
+          <button type="button" id="togglePassword">
+            <img src="Files/vectorShow.svg" id="eye-icon">
+          </button>
+          <div id="error" style="color: red; display: none;">Incorrect password or email</div>
         </div>
         <div class="submit">
-          <button>Login</button>
+          <button onclick="checkPassword()">Login</button>
         </div>
         <div class="links">
           <a class="first-link" href="#">You don’t have an account yet?</a>
@@ -134,4 +148,5 @@
       </body>
     </html>
   </body>
+  <script src="./login.js"></script>
 </html>

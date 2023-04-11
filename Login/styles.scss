@@ -7,7 +7,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 7px;
+      padding: 7.5px;
       gap: 10px;
 
       a {
@@ -31,17 +31,113 @@ body {
       }
     }
     .menu {
+      position: relative;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 24px 41px;
-      gap: 62px;
+      gap: 32px;
+
+      @media (max-width: 768px) {
+        padding: 24px 28px 24px 18px;
+      }
+
+      .burger {
+        position: relative;
+        right: 0;
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        @media (min-width: 1080px) {
+          display: none;
+        }
+        .menu-items {
+          display: none;
+          position: absolute;
+          top: -53px;
+          left: 0;
+          width: 200px;
+          padding: 0px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: left 0.2s;
+          z-index: 2;
+          -webkit-transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+          list-style: none;
+          a {
+            display: flex;
+            justify-content: flex-start;
+            padding: 30px;
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            /* identical to box height */
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #0a0a0a;
+          }
+          .outlet-color {
+            background: linear-gradient(
+              135deg,
+              #ff7324 14.84%,
+              #ee3b28 35.81%,
+              #da1500 51.16%,
+              #ee3b28 67.63%,
+              #fea14a 86.72%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+        &.active {
+          .menu-items {
+            display: block;
+            transform: translateX(0%);
+          }
+        }
+      }
+      .logo {
+        .mobile-logo {
+          // Centers a logo inside of menu
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        //switching full and mobile logos
+
+        @media (max-width: 768px) {
+          .full-logo {
+            display: none;
+          }
+        }
+        @media (min-width: 768px) {
+          .mobile-logo {
+            display: none;
+          }
+        }
+      }
+
       nav {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        gap: 62px;
+        align-items: center;
+        gap: 32px;
+
+        @media (max-width: 1080px) {
+          flex-direction: column;
+          order: -1;
+          display: none;
+        }
+
         a {
           font-family: "DM Sans";
           font-style: normal;
@@ -77,6 +173,14 @@ body {
         align-items: center;
         padding: 0px;
         gap: 28px;
+        @media (max-width: 768px) {
+          gap: 22px;
+        }
+        .profile {
+          @media (max-width: 1080px) {
+            display: none;
+          }
+        }
         .cart {
           display: flex;
           align-items: center;
@@ -132,9 +236,39 @@ body {
         margin-bottom: 51px;
       }
       .input-box {
+        position: relative;
         display: flex;
         flex-direction: column;
         padding-bottom: 24px;
+        height: 80px; /* add a fixed height */
+
+        #error {
+          position: absolute;
+          top: 60%;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 13px;
+          /* identical to box height */
+          letter-spacing: 0.04em;
+          padding-top: 5px;
+        }
+        #togglePassword{
+          position: absolute;
+          top: 42%;
+          right: 0.5em;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          font-size: 0.8em;
+          cursor: pointer;
+          outline: none;
+        }
+        #error + #togglePassword {
+          top: calc(50% + 18px);
+        }
+
         input {
           border-radius: 6px;
           background-color: transparent;
@@ -148,6 +282,7 @@ body {
             ),
             linear-gradient(0deg, #888888, #888888);
         }
+
         span {
           font-family: "DM Sans";
           font-style: normal;
@@ -208,6 +343,7 @@ body {
 
           /* Text Color/Dark Grey */
           color: #222222;
+          cursor: pointer;
         }
 
         .first-link {

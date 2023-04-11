@@ -7,6 +7,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 7.5px;
+      gap: 10px;
 
       a {
         font-family: "DM Sans";
@@ -22,24 +24,120 @@ body {
 
         color: #ffffff;
 
-        padding: 4px 8px;
-        gap: 10px;
+        // padding: 7.5px;
 
         /* Preserve whitespace within the <a> element's text. */
         white-space: pre-wrap;
       }
     }
     .menu {
+      position: relative;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 24px 41px;
-      gap: 62px;
+      gap: 32px;
+
+      @media (max-width: 768px) {
+        padding: 24px 28px 24px 18px;
+      }
+
+      .burger {
+        position: relative;
+        right: 0;
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        @media (min-width: 1080px) {
+          display: none;
+        }
+        .menu-items {
+          display: none;
+          position: absolute;
+          top: -53px;
+          left: 0;
+          width: 200px;
+          padding: 0px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: left 0.2s;
+          z-index: 2;
+          -webkit-transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+          list-style: none;
+          a {
+            display: flex;
+            justify-content: flex-start;
+            padding: 30px;
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            /* identical to box height */
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #0a0a0a;
+          }
+          .outlet-color {
+            background: linear-gradient(
+              135deg,
+              #ff7324 14.84%,
+              #ee3b28 35.81%,
+              #da1500 51.16%,
+              #ee3b28 67.63%,
+              #fea14a 86.72%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+        &.active {
+          .menu-items {
+            display: block;
+            transform: translateX(0%);
+          }
+        }
+      }
+      .logo {
+        .mobile-logo {
+          // Centers a logo inside of menu
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        //switching full and mobile logos
+
+        @media (max-width: 768px) {
+          .full-logo {
+            display: none;
+          }
+        }
+        @media (min-width: 768px) {
+          .mobile-logo {
+            display: none;
+          }
+        }
+      }
+
       nav {
         display: flex;
         justify-content: space-between;
-        gap: 62px;
+        align-items: center;
+        gap: 32px;
+
+        @media (max-width: 1080px) {
+          flex-direction: column;
+          order: -1;
+          display: none;
+        }
+
         a {
           font-family: "DM Sans";
           font-style: normal;
@@ -75,6 +173,14 @@ body {
         align-items: center;
         padding: 0px;
         gap: 28px;
+        @media (max-width: 768px) {
+          gap: 22px;
+        }
+        .profile {
+          @media (max-width: 1080px) {
+            display: none;
+          }
+        }
         .cart {
           display: flex;
           align-items: center;
@@ -108,18 +214,29 @@ body {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 16px 40px;
+      padding: 14px 40px;
       gap: 80px;
 
       /* Light-Grey */
       background: #f6f6f6;
+
+      overflow-x: auto;
+      white-space: nowrap;
+
+      @media (max-width: 1180px) {
+        gap: 60px;
+      }
+
+      @media (max-width: 1080px) {
+        justify-content: flex-start;
+      }
 
       .frame {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding: 2px 0px;
+        padding: 0px;
         gap: 17px;
       }
 
@@ -144,11 +261,26 @@ body {
 
   .hero {
     background: url("Files/Hero-img.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
+    background-position: center;
     height: 520px;
+
+    @media (max-width: 568px) {
+      background: url("Files/image 13Hero-mobile.svg"), url("Files/Hero-mobile-black-part.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
     .box {
       padding-left: 155px;
       padding-top: 118px;
+      @media (max-width: 568px) {
+        top: 100%;
+        padding-left: 16px;
+      }
 
       p {
         font-family: "DM Sans";
@@ -210,6 +342,10 @@ body {
         padding-bottom: 24px;
 
         color: #ffffff;
+        @media (max-width: 568px) {
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
       }
 
       button {
@@ -224,10 +360,21 @@ body {
         justify-content: space-between;
         letter-spacing: 0.1em;
         padding: 16px;
+        text-transform: uppercase;
 
         /* White */
         background: #ffffff;
         border-radius: 4px;
+        cursor: pointer;
+
+        @media (max-width: 568px) {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 21px;
+          /* identical to box height */
+          letter-spacing: 0.04em;
+          text-transform: none;
+        }
 
         span {
           display: inline-block;
@@ -250,6 +397,9 @@ body {
         gap: 8px;
         width: 223px;
         height: 20px;
+        @media (max-width: 568px) {
+          padding-top: 24px;
+        }
         .line1 {
           background: #f6f6f620;
 
@@ -285,10 +435,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 22px;
     padding: 56px 38px 0px 38px;
     background: #f5f5f5;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    @media (max-width: 1080px) {
+      justify-content: flex-start;
+    }
 
     .card1 {
       position: relative;
@@ -298,7 +455,6 @@ body {
       border-radius: 6px;
       width: 440px;
       height: 564px;
-      max-width: 100%;
 
       .card1-front {
         position: absolute;
@@ -371,6 +527,7 @@ body {
         padding-left: 30px;
         margin: 0;
         padding-top: 8px;
+        word-wrap: break-word;
       }
 
       span {
@@ -604,6 +761,7 @@ body {
       height: 500px;
       width: 1362px;
       border-radius: 6px;
+      overflow: hidden;
 
       .glasses {
         .big-glass {
