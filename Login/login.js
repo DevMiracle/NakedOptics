@@ -6,7 +6,7 @@ burger.addEventListener('click', function() {
 
 
 function checkPassword() {
-    event.preventDefault(); // Остановить отправку формы
+    // event.preventDefault(); // Остановить отправку формы
   let password = document.getElementById("psw").value;
   let error = document.getElementById("error");
 

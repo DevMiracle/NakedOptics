@@ -49,6 +49,11 @@ body .container .menu #burger-menu button {
   border: none;
   cursor: pointer;
 }
+@media (min-width: 1080px) {
+  body .container .menu #burger-menu {
+    display: none;
+  }
+}
 body .container .menu #burger-menu-list {
   z-index: 9;
   min-width: 100%;

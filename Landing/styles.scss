@@ -53,6 +53,9 @@ body {
           border: none;
           cursor: pointer;
         }
+        @media (min-width: 1080px) {
+         display: none;
+        }
       }
 
       #burger-menu-list {
@@ -68,6 +71,7 @@ body {
         text-align: center;
         padding-top: 10px;
         transition: all 0.3s ease-in-out;
+        
 
 
         &.overlay {
