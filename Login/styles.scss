@@ -41,10 +41,13 @@ body {
       @media (max-width: 768px) {
         padding: 24px 28px 24px 18px;
       }
+      $body-bg-color: #1e3c72;
 
-      .burger {
+      #burger-menu {
+        cursor: pointer;
+        overflow: visible;
         position: relative;
-        right: 0;
+        z-index: 99;
         button {
           background-color: transparent;
           border: none;
@@ -53,55 +56,66 @@ body {
         @media (min-width: 1080px) {
           display: none;
         }
-        .menu-items {
-          display: none;
-          position: absolute;
-          top: -53px;
-          left: 0;
-          width: 200px;
-          padding: 0px;
-          background-color: #fff;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          transition: left 0.2s;
-          z-index: 2;
-          -webkit-transform: translateZ(0);
-          -webkit-backface-visibility: hidden;
-          list-style: none;
-          a {
-            display: flex;
-            justify-content: flex-start;
-            padding: 30px;
-            font-family: "DM Sans";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 21px;
-            /* identical to box height */
-            text-align: center;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #0a0a0a;
-          }
-          .outlet-color {
-            background: linear-gradient(
-              135deg,
-              #ff7324 14.84%,
-              #ee3b28 35.81%,
-              #da1500 51.16%,
-              #ee3b28 67.63%,
-              #fea14a 86.72%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-          }
+      }
+
+      #burger-menu-list {
+        z-index: 9;
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top: 10px;
+        transition: all 0.3s ease-in-out;
+        //just a comment
+
+        &.overlay {
+          visibility: visible;
+          opacity: 1;
+          padding-top: 10px;
+          background: white;
         }
-        &.active {
-          .menu-items {
-            display: block;
-            transform: translateX(0%);
-          }
+
+        ul {
+          padding: 0;
+        }
+
+        li {
+          list-style: none;
+        }
+
+        a {
+          display: flex;
+          justify-content: center;
+          padding: 30px;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 21px;
+          /* identical to box height */
+          text-align: center;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #0a0a0a;
+        }
+        .outlet-color {
+          background: linear-gradient(
+            135deg,
+            #ff7324 14.84%,
+            #ee3b28 35.81%,
+            #da1500 51.16%,
+            #ee3b28 67.63%,
+            #fea14a 86.72%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
       }
       .logo {
@@ -254,7 +268,7 @@ body {
           letter-spacing: 0.04em;
           padding-top: 5px;
         }
-        #togglePassword{
+        #togglePassword {
           position: absolute;
           top: 42%;
           right: 0.5em;

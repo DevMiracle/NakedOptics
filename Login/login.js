@@ -1,10 +1,3 @@
-const burger = document.querySelector('.burger');
-
-burger.addEventListener('click', function() {
-  this.classList.toggle('active');
-});
-
-
 function checkPassword() {
     // event.preventDefault(); // Остановить отправку формы
   let password = document.getElementById("psw").value;
@@ -29,3 +22,11 @@ togglePasswordButton.addEventListener("click", function () {
   eyeIcon.setAttribute("src", type === "password" ? "Files/vectorShow.svg" : "Files/vectorHide.svg");
 });
 
+let burgerMenu = document.getElementById('burger-menu');
+
+let overlay = document.getElementById('burger-menu-list');
+
+burgerMenu.addEventListener('click', function() {
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});

@@ -38,38 +38,51 @@ body .container .menu {
     padding: 24px 28px 24px 18px;
   }
 }
-body .container .menu .burger {
+body .container .menu #burger-menu {
+  cursor: pointer;
+  overflow: visible;
   position: relative;
-  right: 0;
+  z-index: 99;
 }
-body .container .menu .burger button {
+body .container .menu #burger-menu button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 @media (min-width: 1080px) {
-  body .container .menu .burger {
+  body .container .menu #burger-menu {
     display: none;
   }
 }
-body .container .menu .burger .menu-items {
-  display: none;
-  position: absolute;
-  top: -53px;
+body .container .menu #burger-menu-list {
+  z-index: 9;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 200px;
-  padding: 0px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: left 0.2s;
-  z-index: 2;
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+body .container .menu #burger-menu-list.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+  background: white;
+}
+body .container .menu #burger-menu-list ul {
+  padding: 0;
+}
+body .container .menu #burger-menu-list li {
   list-style: none;
 }
-body .container .menu .burger .menu-items a {
+body .container .menu #burger-menu-list a {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 30px;
   font-family: "DM Sans";
   font-style: normal;
@@ -83,15 +96,11 @@ body .container .menu .burger .menu-items a {
   text-decoration: none;
   color: #0a0a0a;
 }
-body .container .menu .burger .menu-items .outlet-color {
+body .container .menu #burger-menu-list .outlet-color {
   background: linear-gradient(135deg, #ff7324 14.84%, #ee3b28 35.81%, #da1500 51.16%, #ee3b28 67.63%, #fea14a 86.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-body .container .menu .burger.active .menu-items {
-  display: block;
-  transform: translateX(0%);
 }
 body .container .menu .logo .mobile-logo {
   position: absolute;
