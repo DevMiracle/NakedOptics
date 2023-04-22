@@ -234,6 +234,10 @@ body {
       width: 440px;
       padding-top: 80px;
       padding-bottom: 92px;
+
+      @media (max-width: 568px) {
+        width: 342px;
+      }
       h1 {
         font-family: "DM Sans";
         font-style: normal;
@@ -295,6 +299,23 @@ body {
               rgba(0, 0, 0, 0.2)
             ),
             linear-gradient(0deg, #888888, #888888);
+        }
+
+        a {
+          position: absolute;
+          right: 0;
+          top: 0;
+          text-decoration: none;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          /* identical to box height */
+          letter-spacing: 0.04em;
+
+          /* Blue */
+          color: #009aff;
         }
 
         span {
@@ -373,15 +394,28 @@ body {
   }
   .newsletter-container {
     background: url("Files/Newsletter-background.png");
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
     .newsletter {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       margin: 48px 155px 56px 155px;
       gap: 55px;
+
+      @media (max-width: 1080px) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        margin: 24px 16px 56px 16px;
+        gap: 16px;
+      }
+
       .newsletter-text {
         p {
           font-family: "DM Sans";
@@ -408,30 +442,36 @@ body {
 
           margin: 0;
           padding-top: 8px;
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 23px;
+          }
         }
       }
       .newsletter-email {
         display: flex;
         flex-direction: column;
+        // align-items: center;
         justify-content: center;
-        margin-top: 30px;
         form {
           display: flex;
           justify-content: space-between;
           gap: 8px;
           #email {
+            padding: 12px 8px 12px 12px;
+            border: 0.5px solid #ffffff;
+            border-radius: 6px;
             background-color: transparent;
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: 338px;
 
-            /* White */
-            border: 0.5px solid #ffffff;
-            border-radius: 6px;
-            width: 323px;
-            height: 34px;
-            padding-left: 12px;
+            @media (max-width: 568px) {
+              width: 214px;
           }
+        }
           button {
             font-family: "DM Sans";
             font-style: normal;
@@ -452,6 +492,12 @@ body {
             background: #ffffff;
             border-radius: 4px;
 
+            @media (max-width: 568px) {
+              width: 121px;
+              justify-content: center;
+              align-items: center;
+          }
+
             span {
               display: inline-block;
               font-size: 1.2rem;
@@ -461,6 +507,9 @@ body {
               background: #0a0a0a;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: 568px) {
+                padding-left: 5px;
+            }
             }
           }
         }
@@ -475,8 +524,10 @@ body {
           color: #ffffff;
           padding-top: 5px;
           align-items: center;
-          input {
+          #checkbox {
+
           }
+
           a {
             font-family: "DM Sans";
             font-style: normal;
@@ -513,6 +564,9 @@ body {
       color: #ffffff;
     }
   }
+  img {
+    margin: 0;
+  }
 
   footer {
     background-color: #0a0a0a;
@@ -529,6 +583,7 @@ body {
         width: 100%;
         max-width: 250px;
         margin-bottom: 40px;
+
         .social-icons {
           display: flex;
           justify-content: space-between;
@@ -541,6 +596,16 @@ body {
           flex-wrap: wrap;
           align-content: flex-start;
         }
+      }
+      #OurStory {
+        @media (max-width: 568px) {
+          // display: none;
+      }
+      }
+      #Support {
+        @media (max-width: 568px) {
+          // display: none;
+      }
       }
 
       h3 {

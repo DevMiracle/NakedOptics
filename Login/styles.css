@@ -202,6 +202,11 @@ body .form-container form {
   padding-top: 80px;
   padding-bottom: 92px;
 }
+@media (max-width: 568px) {
+  body .form-container form {
+    width: 342px;
+  }
+}
 body .form-container form h1 {
   font-family: "DM Sans";
   font-style: normal;
@@ -254,6 +259,21 @@ body .form-container form .input-box input {
   padding: 13.5px 8px 12px 12px;
   border: 0.5px solid;
   border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #888888, #888888);
+}
+body .form-container form .input-box a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  /* Blue */
+  color: #009aff;
 }
 body .form-container form .input-box span {
   font-family: "DM Sans";
@@ -321,16 +341,30 @@ body .form-container form .links span {
 }
 body .newsletter-container {
   background: url("Files/Newsletter-background.png");
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 body .newsletter-container .newsletter {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 48px 155px 56px 155px;
   gap: 55px;
+}
+@media (max-width: 1080px) {
+  body .newsletter-container .newsletter {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  body .newsletter-container .newsletter {
+    flex-wrap: wrap;
+    margin: 24px 16px 56px 16px;
+    gap: 16px;
+  }
 }
 body .newsletter-container .newsletter .newsletter-text p {
   font-family: "DM Sans";
@@ -354,11 +388,16 @@ body .newsletter-container .newsletter .newsletter-text h1 {
   margin: 0;
   padding-top: 8px;
 }
+@media (max-width: 768px) {
+  body .newsletter-container .newsletter .newsletter-text h1 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
 body .newsletter-container .newsletter .newsletter-email {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 30px;
 }
 body .newsletter-container .newsletter .newsletter-email form {
   display: flex;
@@ -366,16 +405,19 @@ body .newsletter-container .newsletter .newsletter-email form {
   gap: 8px;
 }
 body .newsletter-container .newsletter .newsletter-email form #email {
+  padding: 12px 8px 12px 12px;
+  border: 0.5px solid #ffffff;
+  border-radius: 6px;
   background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* White */
-  border: 0.5px solid #ffffff;
-  border-radius: 6px;
-  width: 323px;
-  height: 34px;
-  padding-left: 12px;
+  width: 338px;
+}
+@media (max-width: 568px) {
+  body .newsletter-container .newsletter .newsletter-email form #email {
+    width: 214px;
+  }
 }
 body .newsletter-container .newsletter .newsletter-email form button {
   font-family: "DM Sans";
@@ -395,6 +437,13 @@ body .newsletter-container .newsletter .newsletter-email form button {
   background: #ffffff;
   border-radius: 4px;
 }
+@media (max-width: 568px) {
+  body .newsletter-container .newsletter .newsletter-email form button {
+    width: 121px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 body .newsletter-container .newsletter .newsletter-email form button span {
   display: inline-block;
   font-size: 1.2rem;
@@ -403,6 +452,11 @@ body .newsletter-container .newsletter .newsletter-email form button span {
   background: #0a0a0a;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 568px) {
+  body .newsletter-container .newsletter .newsletter-email form button span {
+    padding-left: 5px;
+  }
 }
 body .newsletter-container .newsletter .newsletter-email .label-checkbox {
   font-family: "DM Sans";
@@ -443,6 +497,9 @@ body .footer h1 {
   /* or 112% */
   /* White */
   color: #ffffff;
+}
+body img {
+  margin: 0;
 }
 body footer {
   background-color: #0a0a0a;

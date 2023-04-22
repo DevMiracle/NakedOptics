@@ -54,7 +54,7 @@ body {
           cursor: pointer;
         }
         @media (min-width: 1080px) {
-         display: none;
+          display: none;
         }
       }
 
@@ -72,13 +72,11 @@ body {
         padding-top: 10px;
         transition: all 0.3s ease-in-out;
         //just a comment
-        
-
 
         &.overlay {
           visibility: visible;
           opacity: 1;
-          padding-top: 10px;
+          padding-top: 20px;
           background: white;
         }
 
@@ -360,7 +358,7 @@ body {
     .box {
       padding-left: 155px;
       padding-top: 118px;
-      @media (max-width: 768px) {
+      @media (max-width: 820px) {
         top: 100%;
         padding-left: 16px;
       }
@@ -524,10 +522,12 @@ body {
     background: #f5f5f5;
 
     overflow-x: auto;
-    white-space: nowrap;
 
     @media (max-width: 1080px) {
       justify-content: flex-start;
+    }
+    @media (max-width: 568px) {
+      padding: 32px 17px 0px 17px;
     }
 
     .card1 {
@@ -538,6 +538,13 @@ body {
       border-radius: 6px;
       width: 440px;
       height: 564px;
+      flex-shrink: 0;
+
+      @media (max-width: 568px) {
+        background-size: contain;
+        width: 320px;
+        height: 478px;
+      }
 
       .card1-front {
         position: absolute;
@@ -546,6 +553,11 @@ body {
         transform: translate(-50%, -50%);
         max-width: 100%;
         max-height: 100%;
+        img {
+          @media (max-width: 568px) {
+            max-width: 199.27px;
+          }
+        }
       }
 
       h3 {
@@ -580,6 +592,15 @@ body {
         margin: 0;
         padding-left: 30px;
         padding-top: 341px;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 568px) {
+          padding-top: 254.43px;
+          text-transform: uppercase;
+        }
       }
 
       h2 {
@@ -610,7 +631,10 @@ body {
         padding-left: 30px;
         margin: 0;
         padding-top: 8px;
-        word-wrap: break-word;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       span {
@@ -639,6 +663,13 @@ body {
       border-radius: 6px;
       width: 440px;
       height: 564px;
+      flex-shrink: 0;
+
+      @media (max-width: 568px) {
+        background-size: contain;
+        width: 320px;
+        height: 478px;
+      }
 
       .card2-front {
         position: absolute;
@@ -647,6 +678,11 @@ body {
         transform: translate(-50%, -50%);
         max-width: 100%;
         max-height: 100%;
+        img {
+          @media (max-width: 568px) {
+            max-width: 199.27px;
+          }
+        }
       }
 
       h3 {
@@ -681,6 +717,15 @@ body {
         margin: 0;
         padding-left: 30px;
         padding-top: 341px;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 568px) {
+          padding-top: 254.43px;
+          text-transform: uppercase;
+        }
       }
 
       h2 {
@@ -711,6 +756,10 @@ body {
         padding-left: 30px;
         margin: 0;
         padding-top: 8px;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       span {
@@ -739,6 +788,14 @@ body {
       border-radius: 6px;
       width: 440px;
       height: 564px;
+      flex-shrink: 0;
+
+      @media (max-width: 568px) {
+        background-size: contain;
+        width: 320px;
+        height: 478px;
+      }
+
       .card3-front {
         position: absolute;
         top: 50%;
@@ -746,6 +803,11 @@ body {
         transform: translate(-50%, -50%);
         max-width: 100%;
         max-height: 100%;
+        img {
+          @media (max-width: 568px) {
+            max-width: 199.27px;
+          }
+        }
       }
 
       h3 {
@@ -780,6 +842,15 @@ body {
         margin: 0;
         padding-left: 30px;
         padding-top: 341px;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 568px) {
+          padding-top: 254.43px;
+          text-transform: uppercase;
+        }
       }
 
       h2 {
@@ -810,6 +881,10 @@ body {
         padding-left: 30px;
         margin: 0;
         padding-top: 8px;
+        background: linear-gradient(0deg, #888888, #888888),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       span {
@@ -1003,10 +1078,13 @@ body {
       text-align: center;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      margin: 0;
 
       color: #000000;
 
-      margin: 0;
+      @media (max-width: 568px) {
+        font-size: 24px;
+      }
     }
     a {
       display: flex;
@@ -1025,79 +1103,105 @@ body {
         margin-left: 9.45px;
         font-size: 1.2rem;
       }
+
+      @media (max-width: 568px) {
+        display: none;
+      }
     }
   }
-  .carousel-container {
+
+  .stories {
     display: flex;
     padding-left: 40px;
     background: #f5f5f5;
     padding-bottom: 20px;
+    display: flex;
+    gap: 24px;
+    z-index: 3;
+    overflow: hidden;
+    overflow-x: auto;
 
-    .carousel-wrapper {
-      display: flex;
-      gap: 24px;
-      overflow: hidden;
+    .stories-item1 {
+      background-image: url("Stories/Image.svg");
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      width: 368px;
+      height: 620px;
+      border: none;
+      border-radius: 6px;
       z-index: 3;
-      overflow: hidden;
 
-      .carousel-item1 {
-        background-image: url("Stories/Image.svg");
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        width: 368px;
-        height: 620px;
-        border: none;
-        border-radius: 6px;
-        z-index: 0;
+      @media (max-width: 568px) {
+        width: 320px;
+        height: 480px;
       }
-      .carousel-item2 {
-        background-image: url("Stories/Stories2.svg");
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        width: 368px;
-        height: 620px;
-        border: none;
-        border-radius: 6px;
-        z-index: 0;
-      }
-      .carousel-item3 {
-        background-image: url("Stories/Stories3.svg");
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        width: 368px;
-        height: 620px;
-        border: none;
-        border-radius: 6px;
-        z-index: 0;
-      }
-      .carousel-item4 {
-        background-image: url("Stories/Stories4.svg");
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        width: 368px;
-        height: 620px;
-        border: none;
-        border-radius: 6px;
-        z-index: 0;
-      }
+    }
+    .stories-item2 {
+      background-image: url("Stories/Stories2.svg");
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      width: 368px;
+      height: 620px;
+      border: none;
+      border-radius: 6px;
+      z-index: 3;
 
-      p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "DM Sans";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 108%;
-        /* or 24px */
-        align-items: flex-end;
+      @media (max-width: 568px) {
+        width: 320px;
+        height: 480px;
+      }
+    }
+    .stories-item3 {
+      background-image: url("Stories/Stories3.svg");
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      width: 368px;
+      height: 620px;
+      border: none;
+      border-radius: 6px;
+      z-index: 3;
 
-        /* White */
-        color: #ffffff;
+      @media (max-width: 568px) {
+        width: 320px;
+        height: 480px;
+      }
+    }
+    .stories-item4 {
+      background-image: url("Stories/Stories4.svg");
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      width: 368px;
+      height: 620px;
+      border: none;
+      border-radius: 6px;
+      z-index: 3;
 
-        margin: 0;
-        padding: 532px 24px 40px 24px;
+      @media (max-width: 568px) {
+        width: 320px;
+        height: 480px;
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 108%;
+      /* or 24px */
+      align-items: flex-end;
+
+      /* White */
+      color: #ffffff;
+
+      margin: 0;
+      padding: 532px 24px 40px 24px;
+
+      @media (max-width: 568px) {
+        padding: 343px 24px 40px 24px;
       }
     }
   }
@@ -1147,6 +1251,7 @@ body {
     justify-content: space-between;
     padding: 40px 62px 56px 62px;
     gap: 25.33px;
+    overflow-x: auto;
 
     .category-card1 {
       background-image: url("category-card/Image.svg");
@@ -1154,6 +1259,7 @@ body {
       border-radius: 6px;
       width: 310px;
       height: 380px;
+      flex-shrink: 0;
     }
     .category-card2 {
       background-image: url("category-card/Image-2.svg");
@@ -1161,6 +1267,8 @@ body {
       border-radius: 6px;
       width: 310px;
       height: 380px;
+
+      flex-shrink: 0;
     }
     .category-card3 {
       background-image: url("category-card/Image-3.svg");
@@ -1168,6 +1276,7 @@ body {
       border-radius: 6px;
       width: 310px;
       height: 380px;
+      flex-shrink: 0;
     }
     .category-card4 {
       background-image: url("category-card/Image-4.svg");
@@ -1175,6 +1284,7 @@ body {
       border-radius: 6px;
       width: 310px;
       height: 380px;
+      flex-shrink: 0;
     }
     h6 {
       font-family: "DM Sans";
@@ -1237,6 +1347,7 @@ body {
       flex-wrap: wrap;
       align-content: flex-start;
       justify-content: space-between;
+
       img[alt="FreeRide-logo"] {
         width: 178.67px;
         height: 140px;
@@ -1249,9 +1360,9 @@ body {
   }
   .newsletter-container {
     background: url("Files/Newsletter-background.png");
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     .newsletter {
       display: flex;
       flex-direction: row;
@@ -1259,8 +1370,17 @@ body {
       align-items: center;
       margin: 48px 155px 56px 155px;
       gap: 55px;
-      //delete this
-      overflow: hidden;
+
+      @media (max-width: 1080px) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        margin: 24px 16px 56px 16px;
+        gap: 16px;
+      }
+
       .newsletter-text {
         p {
           font-family: "DM Sans";
@@ -1281,6 +1401,7 @@ body {
           font-size: 32px;
           line-height: 36px;
           /* or 112% */
+          min-width: 400px;
 
           /* White */
           color: #ffffff;
@@ -1351,8 +1472,12 @@ body {
           color: #ffffff;
           padding-top: 5px;
           align-items: center;
-          input {
+          #checkbox {
+            // background: transparent;
+            // outline: 2px solid black; 
+            // border: 1px solid black;
           }
+
           a {
             font-family: "DM Sans";
             font-style: normal;
@@ -1401,6 +1526,10 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
 
+      @media (max-width: 568px) {
+        // flex-direction: column;
+      }
+
       .box {
         width: 100%;
         max-width: 250px;
@@ -1416,6 +1545,17 @@ body {
           display: flex;
           flex-wrap: wrap;
           align-content: flex-start;
+        }
+      }
+
+      #OurStory {
+        @media (max-width: 568px) {
+          // display: none;
+        }
+      }
+      #Support {
+        @media (max-width: 568px) {
+          // display: none;
         }
       }
 
